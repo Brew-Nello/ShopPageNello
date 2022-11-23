@@ -3,21 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B065CF6A7B16611CF5F950CC /* Pods_ShopPageNello.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A775AC69294975EBEE3ADBBB /* Pods_ShopPageNello.framework */; };
 		FBCB8A99292B4EF6001CCC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8A98292B4EF6001CCC52 /* AppDelegate.swift */; };
 		FBCB8A9B292B4EF6001CCC52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8A9A292B4EF6001CCC52 /* SceneDelegate.swift */; };
 		FBCB8AA2292B4EF8001CCC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCB8AA1292B4EF8001CCC52 /* Assets.xcassets */; };
 		FBCB8AB2292CC700001CCC52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB1292CC700001CCC52 /* HomeViewController.swift */; };
 		FBCB8AB4292CC709001CCC52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB3292CC709001CCC52 /* HomeView.swift */; };
-		FBCB8AB6292CC70F001CCC52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB5292CC70F001CCC52 /* HomeViewModel.swift */; };
 		FBCB8AB8292CC716001CCC52 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB7292CC716001CCC52 /* HomeAPI.swift */; };
 		FBCB8ABA292CC780001CCC52 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCB8AB9292CC780001CCC52 /* Colors.xcassets */; };
+		FBCB8ABD292DEB27001CCC52 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */; };
+		FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ABE292DF479001CCC52 /* Colors.swift */; };
+		FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */; };
+		FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D39D6890687C12B2A8A2F56 /* Pods-ShopPageNello.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopPageNello.release.xcconfig"; path = "Target Support Files/Pods-ShopPageNello/Pods-ShopPageNello.release.xcconfig"; sourceTree = "<group>"; };
+		750F6BF6E1BED5844759238E /* Pods-ShopPageNello.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopPageNello.debug.xcconfig"; path = "Target Support Files/Pods-ShopPageNello/Pods-ShopPageNello.debug.xcconfig"; sourceTree = "<group>"; };
+		A775AC69294975EBEE3ADBBB /* Pods_ShopPageNello.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopPageNello.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCB8A95292B4EF6001CCC52 /* ShopPageNello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopPageNello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCB8A98292B4EF6001CCC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCB8A9A292B4EF6001CCC52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +32,12 @@
 		FBCB8AA6292B4EF8001CCC52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCB8AB1292CC700001CCC52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FBCB8AB3292CC709001CCC52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		FBCB8AB5292CC70F001CCC52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FBCB8AB7292CC716001CCC52 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		FBCB8AB9292CC780001CCC52 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
+		FBCB8ABE292DF479001CCC52 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewCell.swift; sourceTree = "<group>"; };
+		FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B065CF6A7B16611CF5F950CC /* Pods_ShopPageNello.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23B57D15737E12BA75F5BB01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A775AC69294975EBEE3ADBBB /* Pods_ShopPageNello.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F188A1ECF6C47D81598E910 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				750F6BF6E1BED5844759238E /* Pods-ShopPageNello.debug.xcconfig */,
+				1D39D6890687C12B2A8A2F56 /* Pods-ShopPageNello.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FBCB8A8C292B4EF6001CCC52 = {
 			isa = PBXGroup;
 			children = (
 				FBCB8A97292B4EF6001CCC52 /* ShopPageNello */,
 				FBCB8A96292B4EF6001CCC52 /* Products */,
+				5F188A1ECF6C47D81598E910 /* Pods */,
+				23B57D15737E12BA75F5BB01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,7 @@
 			children = (
 				FBCB8A98292B4EF6001CCC52 /* AppDelegate.swift */,
 				FBCB8A9A292B4EF6001CCC52 /* SceneDelegate.swift */,
+				FBCB8ABE292DF479001CCC52 /* Colors.swift */,
 				FBCB8AB9292CC780001CCC52 /* Colors.xcassets */,
 				FBCB8AA1292B4EF8001CCC52 /* Assets.xcassets */,
 				FBCB8AA6292B4EF8001CCC52 /* Info.plist */,
@@ -74,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				FBCB8AAE292CC6D3001CCC52 /* Model */,
-				FBCB8AAF292CC6D8001CCC52 /* ViewModel */,
+				FBCB8ABB292DEB19001CCC52 /* Reactor */,
 				FBCB8AAD292CC6CE001CCC52 /* View */,
 				FBCB8AB0292CC6E4001CCC52 /* Controller */,
 			);
@@ -84,6 +115,7 @@
 		FBCB8AAD292CC6CE001CCC52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBCB8AC0292DF4E5001CCC52 /* Cell */,
 				FBCB8AB3292CC709001CCC52 /* HomeView.swift */,
 			);
 			path = View;
@@ -97,20 +129,29 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		FBCB8AAF292CC6D8001CCC52 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				FBCB8AB5292CC70F001CCC52 /* HomeViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		FBCB8AB0292CC6E4001CCC52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				FBCB8AB1292CC700001CCC52 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FBCB8ABB292DEB19001CCC52 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		FBCB8AC0292DF4E5001CCC52 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */,
+				FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBCB8AA9292B4EF8001CCC52 /* Build configuration list for PBXNativeTarget "ShopPageNello" */;
 			buildPhases = (
+				916B783A0E9C92901FF3153E /* [CP] Check Pods Manifest.lock */,
 				FBCB8A91292B4EF6001CCC52 /* Sources */,
 				FBCB8A92292B4EF6001CCC52 /* Frameworks */,
 				FBCB8A93292B4EF6001CCC52 /* Resources */,
+				D71FCD012232110FE75E43FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,7 +192,7 @@
 				};
 			};
 			buildConfigurationList = FBCB8A90292B4EF6001CCC52 /* Build configuration list for PBXProject "ShopPageNello" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -178,17 +221,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		916B783A0E9C92901FF3153E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShopPageNello-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D71FCD012232110FE75E43FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShopPageNello/Pods-ShopPageNello-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShopPageNello/Pods-ShopPageNello-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShopPageNello/Pods-ShopPageNello-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBCB8A91292B4EF6001CCC52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FBCB8AB8292CC716001CCC52 /* HomeAPI.swift in Sources */,
-				FBCB8AB6292CC70F001CCC52 /* HomeViewModel.swift in Sources */,
 				FBCB8A99292B4EF6001CCC52 /* AppDelegate.swift in Sources */,
+				FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */,
 				FBCB8A9B292B4EF6001CCC52 /* SceneDelegate.swift in Sources */,
+				FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */,
+				FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */,
 				FBCB8AB4292CC709001CCC52 /* HomeView.swift in Sources */,
 				FBCB8AB2292CC700001CCC52 /* HomeViewController.swift in Sources */,
+				FBCB8ABD292DEB27001CCC52 /* HomeViewReactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +399,7 @@
 		};
 		FBCB8AAA292B4EF8001CCC52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750F6BF6E1BED5844759238E /* Pods-ShopPageNello.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +413,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +429,7 @@
 		};
 		FBCB8AAB292B4EF8001CCC52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D39D6890687C12B2A8A2F56 /* Pods-ShopPageNello.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,6 +443,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
