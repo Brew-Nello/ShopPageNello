@@ -15,8 +15,6 @@ final class HomeViewModel {
     var homeDataObservable = PublishSubject<HomeModel>()
     var pageDataObservable = PublishSubject<PageModel>()
     
-    var goodDataListObservable = PublishSubject<[GoodVO]>()
-    
     func initialization() {
         provider.request(.initialization) { result in
             switch result {
