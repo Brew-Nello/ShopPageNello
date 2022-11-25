@@ -8,10 +8,7 @@ target 'ShopPageNello' do
   # Pods for ShopPageNello
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'ReactorKit'
   pod 'SDWebImage'
   pod 'Moya/RxSwift'
   pod 'SnapKit'
-#  pod 'Quick'
-#  pod 'Nimble'
 end
