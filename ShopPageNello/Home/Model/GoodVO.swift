@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GoodVO: Decodable {
+struct GoodVO: Codable {
     var id: Int
     var name: String
     var image: String
