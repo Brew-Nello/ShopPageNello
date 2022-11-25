@@ -7,20 +7,29 @@
 
 import UIKit
 
-/// 홈 화면
+/// 홈 화면 View
 final class HomeView: UIView {
-    
     // MARK: - UI
-    
     let collectionView: UICollectionView = {
-        let collectionViewFlowLayout = UICollectionViewFlowLayout()
-        let spacing: CGFloat = 0
-        collectionViewFlowLayout.scrollDirection = .vertical
-        collectionViewFlowLayout.minimumInteritemSpacing = spacing
-        collectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        collectionView.backgroundColor = .blue
+        let width = UIScreen.main.bounds.size.width
+        let size = NSCollectionLayoutSize(
+            widthDimension: NSCollectionLayoutDimension.fractionalWidth(1),
+            heightDimension: NSCollectionLayoutDimension.estimated(width / 1.42)
+        )
+        
+        let item = NSCollectionLayoutItem(layoutSize: size)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        section.interGroupSpacing = 0
+
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        
         return collectionView
     }()
     
@@ -47,7 +56,7 @@ final class HomeView: UIView {
     // MARK: - Actions
     func registerCell() {
         collectionView.register(HomeBannerViewCell.self, forCellWithReuseIdentifier: HomeBannerViewCell.identifier)
-        collectionView.register(HomeItemViewCell.self, forCellWithReuseIdentifier: HomeItemViewCell.identifier)
+        collectionView.register(HomeGoodViewCell.self, forCellWithReuseIdentifier: HomeGoodViewCell.identifier)
     }
     
     // MARK: - Layouts

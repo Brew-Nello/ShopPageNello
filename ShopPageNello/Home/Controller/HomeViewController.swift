@@ -10,16 +10,22 @@ import Moya
 import RxSwift
 import RxCocoa
 
-/// 홈 화면
+/// 홈 화면 Controller
 final class HomeViewController: UIViewController {
     // MARK: - Properties
     let viewModel = HomeViewModel()
     let disposeBag = DisposeBag()
-    var homeData: HomeModel?
     var goodList = [GoodVO]()
+    var likeList = [GoodVO]()
+    var bannerList = [BannerVO]()
+    var homeBannerViewCell: HomeBannerViewCell?
+    
+    var bannerCollectionView: UICollectionView?
+    
     
     // MARK: - UI
-    fileprivate let homeView = HomeView()
+    private let homeView = HomeView()
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - View Life Cycle
     override func loadView() {
@@ -28,11 +34,11 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
         configureCollectionView()
+
         setBinding()
+        
         viewModel.initialization()
-        viewModel.pagination(lastId: 10)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -40,25 +46,13 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Configure
-    /// 네비게이션 바
-    private func configureNavigationBar() {
-        // 타이틀
-        self.navigationItem.titleView = {
-            let label = UILabel()
-            label.text = "홈"
-            label.textColor = .black
-            label.font = .systemFont(ofSize: 16, weight: .bold)
-            return label
-        }()
-        
-        let navigationBarAppearance = UINavigationBarAppearance()
-        navigationBarAppearance.backgroundColor = .white
-        self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
-    }
-    
     func configureCollectionView() {
-        homeView.collectionView.delegate = self
-        // homeView.collectionView.dataSource = self
+        homeView.collectionView.dataSource = self
+
+        refreshControl.tintColor = Colors.text_secondary
+        refreshControl.addTarget(self, action: #selector(loadNextPage), for: .valueChanged)
+        homeView.collectionView.alwaysBounceVertical = true
+        homeView.collectionView.refreshControl = refreshControl
     }
     
     // MARK: - Set Binding
@@ -72,53 +66,112 @@ final class HomeViewController: UIViewController {
         viewModel.pageDataObservable
             .asObserver()
             .subscribe(onNext: { [weak self] model in
-                self?.loadNextPage(model)
+                self?.setNextPage(model)
             }).disposed(by: disposeBag)
-        
-        viewModel.goodDataListObservable
-            .bind(to: homeView.collectionView.rx.items(cellIdentifier: HomeItemViewCell.identifier, cellType: HomeItemViewCell.self)) { [weak self] index, item, cell in
-                cell.setData(item)
-            }.disposed(by: disposeBag)
-        
-        
     }
     
     // MARK: - Actions
     private func initialization(_ model: HomeModel) {
-        homeData = model
-        goodList = model.goods
-        viewModel.goodDataListObservable.onNext(goodList)
-        print(goodList)
+        if let data = SaveManager.loadObject(key: SaveManagerKey.likes) {
+            if let likeList = try? PropertyListDecoder().decode([GoodVO].self, from: data) {
+                self.likeList = likeList
+            }
+        }
+        goodList = model.goods.sorted(by: { $0.id > $1.id })
+        bannerList = model.banners
+        homeView.collectionView.reloadData()
+        bannerCollectionView?.reloadData()
     }
     
-    private func loadNextPage(_ model: PageModel) {
-        goodList += model.goods
-        viewModel.goodDataListObservable.onNext(goodList)
-        print(goodList)
+    private func setNextPage(_ model: PageModel) {
+        goodList = model.goods.sorted(by: { $0.id > $1.id }) + goodList
+        homeView.collectionView.reloadData()
+        stopRefresher()
     }
     
+    @objc func loadNextPage() {
+        homeView.collectionView.refreshControl?.beginRefreshing()
+        if let id = goodList.first?.id {
+            viewModel.pagination(lastId: id)
+        }
+    }
     
+    func stopRefresher() {
+        homeView.collectionView.refreshControl?.endRefreshing()
+    }
     
 }
-
 
 // MARK: - Extensions
-// MARK: - UICollectionViewDelegate
-extension HomeViewController: UICollectionViewDelegate {
+// MARK: - HomeGoodViewCellDelegate
+extension HomeViewController: HomeGoodViewCellDelegate {
+    func selectLike(data: GoodVO) {
+        likeList.insert(data, at: 0)
+        SaveManager.saveObject(object: likeList, key: SaveManagerKey.likes)
+    }
     
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == homeView.collectionView {
-            let cellWidth: CGFloat = UIScreen.main.bounds.size.width
-            let cellHeight: CGFloat = 44 + 40 // 높이: 44, bottom: 40
-            
-            return CGSize(width: cellWidth, height: cellHeight)
+    func deSelectLike(data: GoodVO) {
+        if let index = likeList.firstIndex(where: { $0.id == data.id }) {
+            likeList.remove(at: index)
+            SaveManager.saveObject(object: likeList, key: SaveManagerKey.likes)
         }
-        
-        return CGSize.zero
-        
     }
 }
+
+// MARK: - UICollectionViewDataSource
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == homeView.collectionView {
+            return goodList.count + 1 // 배너 셀 1개 포함
+        }
+        
+        if collectionView == bannerCollectionView {
+            return bannerList.count
+        }
+        
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == homeView.collectionView {
+            if indexPath.row == 0 {
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBannerViewCell.identifier, for: indexPath) as? HomeBannerViewCell {
+                    cell.collectionView.dataSource = self
+                    cell.collectionView.delegate = self
+                    cell.setData(bannerList)
+                    homeBannerViewCell = cell
+                    bannerCollectionView = cell.collectionView
+                    
+                    return cell
+                }
+            } else {
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeGoodViewCell.identifier, for: indexPath) as? HomeGoodViewCell {
+                    let data = goodList[indexPath.row - 1]
+                    cell.likeButton.isSelected = likeList.contains(where: { $0.id == data.id })
+                    cell.setData(data)
+                    cell.delgate = self
+                    return cell
+                }
+            }
+        }
+        
+        if collectionView == bannerCollectionView {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeBannerImageViewCell.identifier, for: indexPath) as? HomeBannerImageViewCell {
+                cell.setData(bannerList[indexPath.row])
+                return cell
+            }
+        }
+        
+        return UICollectionViewCell()
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let x = scrollView.contentOffset.x
+        let width = scrollView.bounds.size.width
+        let currentPage = Int(ceil(x / width)) + 1
+        homeBannerViewCell?.bannerCountLabel.text = "\(currentPage)/\(bannerList.count)"
+    }
+}
+
