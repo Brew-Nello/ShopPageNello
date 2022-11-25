@@ -19,6 +19,11 @@
 		FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ABE292DF479001CCC52 /* Colors.swift */; };
 		FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */; };
 		FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */; };
+		FBCB8ADA292F96E2001CCC52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */; };
+		FBCB8ADC292F994D001CCC52 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADB292F994D001CCC52 /* HomeModel.swift */; };
+		FBCB8ADE292F9954001CCC52 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADD292F9954001CCC52 /* PageModel.swift */; };
+		FBCB8AE0292F9C8F001CCC52 /* GoodVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADF292F9C8F001CCC52 /* GoodVO.swift */; };
+		FBCB8AE2292F9CBE001CCC52 /* BannerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AE1292F9CBE001CCC52 /* BannerVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		FBCB8ABE292DF479001CCC52 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewCell.swift; sourceTree = "<group>"; };
 		FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerViewCell.swift; sourceTree = "<group>"; };
+		FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FBCB8ADB292F994D001CCC52 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FBCB8ADD292F9954001CCC52 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		FBCB8ADF292F9C8F001CCC52 /* GoodVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodVO.swift; sourceTree = "<group>"; };
+		FBCB8AE1292F9CBE001CCC52 /* BannerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 		FBCB8AAC292CC6C6001CCC52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FBCB8AD8292F96DA001CCC52 /* ViewModel */,
 				FBCB8AAE292CC6D3001CCC52 /* Model */,
 				FBCB8ABB292DEB19001CCC52 /* Reactor */,
 				FBCB8AAD292CC6CE001CCC52 /* View */,
@@ -125,6 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				FBCB8AB7292CC716001CCC52 /* HomeAPI.swift */,
+				FBCB8ADB292F994D001CCC52 /* HomeModel.swift */,
+				FBCB8ADD292F9954001CCC52 /* PageModel.swift */,
+				FBCB8AE1292F9CBE001CCC52 /* BannerVO.swift */,
+				FBCB8ADF292F9C8F001CCC52 /* GoodVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +167,14 @@
 				FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FBCB8AD8292F96DA001CCC52 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,12 +294,17 @@
 				FBCB8AB8292CC716001CCC52 /* HomeAPI.swift in Sources */,
 				FBCB8A99292B4EF6001CCC52 /* AppDelegate.swift in Sources */,
 				FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */,
+				FBCB8ADA292F96E2001CCC52 /* HomeViewModel.swift in Sources */,
+				FBCB8ADE292F9954001CCC52 /* PageModel.swift in Sources */,
 				FBCB8A9B292B4EF6001CCC52 /* SceneDelegate.swift in Sources */,
+				FBCB8AE0292F9C8F001CCC52 /* GoodVO.swift in Sources */,
 				FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */,
 				FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */,
 				FBCB8AB4292CC709001CCC52 /* HomeView.swift in Sources */,
 				FBCB8AB2292CC700001CCC52 /* HomeViewController.swift in Sources */,
 				FBCB8ABD292DEB27001CCC52 /* HomeViewReactor.swift in Sources */,
+				FBCB8ADC292F994D001CCC52 /* HomeModel.swift in Sources */,
+				FBCB8AE2292F9CBE001CCC52 /* BannerVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
