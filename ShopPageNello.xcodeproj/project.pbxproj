@@ -15,15 +15,21 @@
 		FBCB8AB4292CC709001CCC52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB3292CC709001CCC52 /* HomeView.swift */; };
 		FBCB8AB8292CC716001CCC52 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AB7292CC716001CCC52 /* HomeAPI.swift */; };
 		FBCB8ABA292CC780001CCC52 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCB8AB9292CC780001CCC52 /* Colors.xcassets */; };
-		FBCB8ABD292DEB27001CCC52 /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */; };
 		FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ABE292DF479001CCC52 /* Colors.swift */; };
-		FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */; };
+		FBCB8AC2292DF509001CCC52 /* HomeGoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC1292DF509001CCC52 /* HomeGoodViewCell.swift */; };
 		FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */; };
 		FBCB8ADA292F96E2001CCC52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */; };
 		FBCB8ADC292F994D001CCC52 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADB292F994D001CCC52 /* HomeModel.swift */; };
 		FBCB8ADE292F9954001CCC52 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADD292F9954001CCC52 /* PageModel.swift */; };
 		FBCB8AE0292F9C8F001CCC52 /* GoodVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8ADF292F9C8F001CCC52 /* GoodVO.swift */; };
 		FBCB8AE2292F9CBE001CCC52 /* BannerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AE1292F9CBE001CCC52 /* BannerVO.swift */; };
+		FBCB8AE829305426001CCC52 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8AE729305426001CCC52 /* Int+.swift */; };
+		FBCB8B232930D1BA001CCC52 /* HomeBannerImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B222930D1BA001CCC52 /* HomeBannerImageViewCell.swift */; };
+		FBCB8B252930D377001CCC52 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B242930D377001CCC52 /* SaveManager.swift */; };
+		FBCB8B272930F0F2001CCC52 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B262930F0F2001CCC52 /* TabBarViewController.swift */; };
+		FBCB8B2E2930F182001CCC52 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B2D2930F182001CCC52 /* LikeViewController.swift */; };
+		FBCB8B302930F6EE001CCC52 /* LikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B2F2930F6EE001CCC52 /* LikeView.swift */; };
+		FBCB8B332930F745001CCC52 /* LikeGoodViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8B322930F745001CCC52 /* LikeGoodViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,15 +45,21 @@
 		FBCB8AB3292CC709001CCC52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FBCB8AB7292CC716001CCC52 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		FBCB8AB9292CC780001CCC52 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
 		FBCB8ABE292DF479001CCC52 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewCell.swift; sourceTree = "<group>"; };
+		FBCB8AC1292DF509001CCC52 /* HomeGoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoodViewCell.swift; sourceTree = "<group>"; };
 		FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerViewCell.swift; sourceTree = "<group>"; };
 		FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FBCB8ADB292F994D001CCC52 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		FBCB8ADD292F9954001CCC52 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		FBCB8ADF292F9C8F001CCC52 /* GoodVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodVO.swift; sourceTree = "<group>"; };
 		FBCB8AE1292F9CBE001CCC52 /* BannerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerVO.swift; sourceTree = "<group>"; };
+		FBCB8AE729305426001CCC52 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		FBCB8B222930D1BA001CCC52 /* HomeBannerImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerImageViewCell.swift; sourceTree = "<group>"; };
+		FBCB8B242930D377001CCC52 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
+		FBCB8B262930F0F2001CCC52 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FBCB8B2D2930F182001CCC52 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
+		FBCB8B2F2930F6EE001CCC52 /* LikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeView.swift; sourceTree = "<group>"; };
+		FBCB8B322930F745001CCC52 /* LikeGoodViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeGoodViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +112,16 @@
 		FBCB8A97292B4EF6001CCC52 /* ShopPageNello */ = {
 			isa = PBXGroup;
 			children = (
+				FBCB8AE3293053DD001CCC52 /* Utils */,
 				FBCB8A98292B4EF6001CCC52 /* AppDelegate.swift */,
 				FBCB8A9A292B4EF6001CCC52 /* SceneDelegate.swift */,
 				FBCB8ABE292DF479001CCC52 /* Colors.swift */,
 				FBCB8AB9292CC780001CCC52 /* Colors.xcassets */,
 				FBCB8AA1292B4EF8001CCC52 /* Assets.xcassets */,
 				FBCB8AA6292B4EF8001CCC52 /* Info.plist */,
+				FBCB8B282930F126001CCC52 /* Main */,
 				FBCB8AAC292CC6C6001CCC52 /* Home */,
+				FBCB8B292930F12E001CCC52 /* Like */,
 			);
 			path = ShopPageNello;
 			sourceTree = "<group>";
@@ -116,7 +131,6 @@
 			children = (
 				FBCB8AD8292F96DA001CCC52 /* ViewModel */,
 				FBCB8AAE292CC6D3001CCC52 /* Model */,
-				FBCB8ABB292DEB19001CCC52 /* Reactor */,
 				FBCB8AAD292CC6CE001CCC52 /* View */,
 				FBCB8AB0292CC6E4001CCC52 /* Controller */,
 			);
@@ -152,19 +166,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		FBCB8ABB292DEB19001CCC52 /* Reactor */ = {
-			isa = PBXGroup;
-			children = (
-				FBCB8ABC292DEB27001CCC52 /* HomeViewReactor.swift */,
-			);
-			path = Reactor;
-			sourceTree = "<group>";
-		};
 		FBCB8AC0292DF4E5001CCC52 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FBCB8AC1292DF509001CCC52 /* HomeItemViewCell.swift */,
+				FBCB8AC1292DF509001CCC52 /* HomeGoodViewCell.swift */,
 				FBCB8AC3292DF52B001CCC52 /* HomeBannerViewCell.swift */,
+				FBCB8B222930D1BA001CCC52 /* HomeBannerImageViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -175,6 +182,73 @@
 				FBCB8AD9292F96E2001CCC52 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBCB8AE3293053DD001CCC52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8AE4293053E6001CCC52 /* Extensions */,
+				FBCB8B242930D377001CCC52 /* SaveManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FBCB8AE4293053E6001CCC52 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8AE729305426001CCC52 /* Int+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBCB8B282930F126001CCC52 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B2A2930F147001CCC52 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FBCB8B292930F12E001CCC52 /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B2C2930F16D001CCC52 /* View */,
+				FBCB8B2B2930F167001CCC52 /* Controller */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
+		FBCB8B2A2930F147001CCC52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B262930F0F2001CCC52 /* TabBarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FBCB8B2B2930F167001CCC52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B2D2930F182001CCC52 /* LikeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FBCB8B2C2930F16D001CCC52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B312930F70B001CCC52 /* Cell */,
+				FBCB8B2F2930F6EE001CCC52 /* LikeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBCB8B312930F70B001CCC52 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB8B322930F745001CCC52 /* LikeGoodViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,17 +366,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCB8AB8292CC716001CCC52 /* HomeAPI.swift in Sources */,
+				FBCB8B302930F6EE001CCC52 /* LikeView.swift in Sources */,
+				FBCB8B332930F745001CCC52 /* LikeGoodViewCell.swift in Sources */,
 				FBCB8A99292B4EF6001CCC52 /* AppDelegate.swift in Sources */,
 				FBCB8AC4292DF52B001CCC52 /* HomeBannerViewCell.swift in Sources */,
 				FBCB8ADA292F96E2001CCC52 /* HomeViewModel.swift in Sources */,
+				FBCB8B272930F0F2001CCC52 /* TabBarViewController.swift in Sources */,
 				FBCB8ADE292F9954001CCC52 /* PageModel.swift in Sources */,
+				FBCB8B232930D1BA001CCC52 /* HomeBannerImageViewCell.swift in Sources */,
 				FBCB8A9B292B4EF6001CCC52 /* SceneDelegate.swift in Sources */,
 				FBCB8AE0292F9C8F001CCC52 /* GoodVO.swift in Sources */,
 				FBCB8ABF292DF479001CCC52 /* Colors.swift in Sources */,
-				FBCB8AC2292DF509001CCC52 /* HomeItemViewCell.swift in Sources */,
+				FBCB8AC2292DF509001CCC52 /* HomeGoodViewCell.swift in Sources */,
+				FBCB8B2E2930F182001CCC52 /* LikeViewController.swift in Sources */,
 				FBCB8AB4292CC709001CCC52 /* HomeView.swift in Sources */,
+				FBCB8AE829305426001CCC52 /* Int+.swift in Sources */,
+				FBCB8B252930D377001CCC52 /* SaveManager.swift in Sources */,
 				FBCB8AB2292CC700001CCC52 /* HomeViewController.swift in Sources */,
-				FBCB8ABD292DEB27001CCC52 /* HomeViewReactor.swift in Sources */,
 				FBCB8ADC292F994D001CCC52 /* HomeModel.swift in Sources */,
 				FBCB8AE2292F9CBE001CCC52 /* BannerVO.swift in Sources */,
 			);
